@@ -12,19 +12,33 @@ import {
 import Logo from '@/components/Logo';
 
 
-// assets
+/**
+ *  assets
+ * */ 
 import {Menu} from 'lucide-react';
+import MobileMenu from './ui/MobileMenu';
 
 
 const Header = () => {
   return (
-    <header className="h-16 grid grid-cols-1 items-center">
+    <header className="h-16 grid grid-cols-1 items-center md:h-20 lg:h-24">
       <div className="container flex justify-between">
         <Logo variant='icon'/>
 
-        <Button variant='outline' size='icon' className='lg:hidden'>
-            <Menu />
-        </Button>
+    
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button variant='outline' size='icon' className='lg:hidden'>
+               <Menu />
+            </Button>
+          </PopoverTrigger>
+
+          <PopoverContent>
+            <MobileMenu />
+          </PopoverContent>
+        </Popover>
+
+        
       </div>
     </header>
 
