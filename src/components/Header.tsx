@@ -10,13 +10,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import Logo from '@/components/Logo';
+import MobileMenu from './ui/MobileMenu';
 
 
 /**
  *  assets
  * */ 
 import {Menu} from 'lucide-react';
-import MobileMenu from './ui/MobileMenu';
+
 
 
 const Header = () => {
