@@ -1,7 +1,7 @@
 /**
  * Types
  */
-import { MenuItem } from '@/types';
+import type { MenuItem } from '@/types';
 
 /**
  * Assets
@@ -24,12 +24,21 @@ import {
   LaptopMinimal,
   ArrowBigDownDash,
   CreditCard,
-  Twitter,
-  Github,
-  Linkedin,
-  Instagram,
-  Youtube,
+  // Twitter,
+  // Github,
+  // Linkedin,
+  // Instagram,
+  // Youtube,
 } from 'lucide-react';
+
+// import disactivated icons from React-Icons library
+import { 
+  FaTwitter, 
+  FaGithub, 
+  FaLinkedin, 
+  FaInstagram, 
+  FaYoutube 
+} from 'react-icons/fa6';
 
 import {
   feature1,
@@ -391,27 +400,51 @@ export const footerData = {
       ],
     },
   ],
-  copyright: '© 2024 codewithsadee',
-  socialLinks: [
+  copyright: '© 2026 ErcTX',
+  // socialLinks: [
+    // {
+    //   href: 'https://x.com/codewithsadee_',
+    //   icon: <Twitter size={18} />,
+    // },
+    // {
+    //   href: 'https://github.com/codewithsadee',
+    //   icon: <Github size={18} />,
+    // },
+    // {
+    //   href: 'https://www.linkedin.com/in/codewithsadee/',
+    //   icon: <Linkedin size={18} />,
+    // },
+    // {
+    //   href: 'https://www.instagram.com/codewithsadee',
+    //   icon: <Instagram size={18} />,
+    // },
+    // {
+    //   href: 'https://www.youtube.com/codewithsadee',
+    //   icon: <Youtube size={18} />,
+    // },
+  // ],
+
+  // replace disactivated icons from React-Icons library
+    socialLinks: [
     {
       href: 'https://x.com/codewithsadee_',
-      icon: <Twitter size={18} />,
+      icon: <FaTwitter size={18} />,
     },
     {
       href: 'https://github.com/codewithsadee',
-      icon: <Github size={18} />,
+      icon: <FaGithub size={18} />,
     },
     {
       href: 'https://www.linkedin.com/in/codewithsadee/',
-      icon: <Linkedin size={18} />,
+      icon: <FaLinkedin size={18} />,
     },
     {
       href: 'https://www.instagram.com/codewithsadee',
-      icon: <Instagram size={18} />,
+      icon: <FaInstagram size={18} />,
     },
     {
       href: 'https://www.youtube.com/codewithsadee',
-      icon: <Youtube size={18} />,
+      icon: <FaYoutube size={18} />,
     },
   ],
 };

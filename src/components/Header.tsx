@@ -18,6 +18,10 @@ import MobileMenu from './ui/MobileMenu';
  * */ 
 import {Menu} from 'lucide-react';
 
+/**
+ * Constatnts
+ */
+import {navMenu} from '@/constants';
 
 
 const Header = () => {
