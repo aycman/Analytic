@@ -39,7 +39,7 @@ const Header = () => {
           </PopoverTrigger>
 
           <PopoverContent>
-            <MobileMenu />
+            <MobileMenu navMenu={navMenu}/>
           </PopoverContent>
         </Popover>
 

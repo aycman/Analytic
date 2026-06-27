@@ -1,6 +1,12 @@
 
+import type {MenuItem} from '@/types';
+import { navMenu } from '../../constants/index';
 
-const MobileMenu = () => {
+type MobileMenuProps = {
+  navMenu: MenuItem[]
+}
+
+const MobileMenu = ({navMenu}: MobileMenuProps) => {
   return (
     <div>
         <ul className="">
