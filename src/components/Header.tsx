@@ -9,6 +9,14 @@ import {
   PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import Logo from '@/components/Logo';
 import MobileMenu from './ui/MobileMenu';
 
@@ -29,7 +37,17 @@ const Header = () => {
     <header className="h-16 grid grid-cols-1 items-center md:h-20 lg:h-24">
       <div className="container flex justify-between">
         <Logo variant='icon'/>
-
+          <NavigationMenu className='max-lg:hidden mx-auto'>
+            <NavigationMenuList>
+              {navMenu.map(({href, label, submenu}, index) => (
+                <NavigationMenuItem key={index}>
+                  <NavigationMenuLink href={href} className=''>
+                    {label}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
     
         <Popover>
           <PopoverTrigger asChild>
@@ -38,7 +56,12 @@ const Header = () => {
             </Button>
           </PopoverTrigger>
 
-          <PopoverContent>
+          <PopoverContent
+            align='end'
+            className='bg-background/50 backdrop-blur-3xl 
+            border-foreground/5 bprder-x-0 border-b-0 rounded-lg
+            overflow-hidden'
+          >
             <MobileMenu navMenu={navMenu}/>
           </PopoverContent>
         </Popover>
